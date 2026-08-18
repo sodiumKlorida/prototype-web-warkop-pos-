@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kasir - Warkop</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-100 font-sans text-gray-900 flex h-screen overflow-hidden">
 
     <!-- Sidebar -->
-    <aside class="w-64 bg-amber-900 text-white flex flex-col transition-transform duration-300 ease-in-out hidden md:flex z-20">
+    <aside
+        class="w-64 bg-amber-900 text-white flex flex-col transition-transform duration-300 ease-in-out hidden md:flex z-20">
         <!-- Logo / Brand -->
         <div class="flex items-center justify-center h-16 border-b border-amber-800">
             <span class="font-bold text-xl tracking-wider">☕ WarkopKita</span>
@@ -18,40 +21,54 @@
         <!-- Navigation Links -->
         <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
             <!-- Nav Melayani Pesanan (Aktif di halaman ini) -->
-            <a href="pesanan.html" class="flex items-center px-4 py-3 bg-white text-amber-900 rounded-lg shadow-md transition-colors font-bold">
+            <a href="pesanan.html"
+                class="flex items-center px-4 py-3 bg-white text-amber-900 rounded-lg shadow-md transition-colors font-bold">
                 <span class="mr-3 text-lg">🛒</span>
                 <span>Melayani Pesanan</span>
             </a>
 
             <!-- Nav Kelola Menu -->
-            <a href="index.html" class="flex items-center px-4 py-3 text-amber-100 hover:bg-amber-800 hover:text-white rounded-lg transition-colors mt-2">
+            <a href="index.html"
+                class="flex items-center px-4 py-3 text-amber-100 hover:bg-amber-800 hover:text-white rounded-lg transition-colors mt-2">
                 <span class="mr-3 text-lg">📋</span>
                 <span class="font-medium">Kelola Menu</span>
             </a>
 
-            <a href="laporan.html" class="flex items-center px-4 py-3 text-amber-100 hover:bg-amber-800 hover:text-white rounded-lg transition-colors">
+            <a href="laporan.html"
+                class="flex items-center px-4 py-3 text-amber-100 hover:bg-amber-800 hover:text-white rounded-lg transition-colors">
                 <span class="mr-3 text-lg">📊</span>
                 <span class="font-medium">Laporan Penjualan</span>
             </a>
         </nav>
+
+        <!-- Logout Area -->
+        <div class="p-4 border-t border-amber-800">
+            <a href="#" class="flex items-center px-4 py-2 text-amber-200 hover:text-white transition-colors">
+                <span class="mr-3 text-lg">🚪</span>
+                <span class="font-medium">Keluar</span>
+            </a>
+        </div>
     </aside>
 
     <!-- Main Wrapper -->
     <div class="flex-1 flex flex-col overflow-hidden">
-        
+
         <!-- Top Navbar -->
-        <header class="bg-white shadow-sm border-b border-gray-200 h-16 flex items-center justify-between px-4 sm:px-6 lg:px-8 z-10">
+        <header
+            class="bg-white shadow-sm border-b border-gray-200 h-16 flex items-center justify-between px-4 sm:px-6 lg:px-8 z-10">
             <div class="flex items-center">
                 <h1 class="text-xl font-bold text-gray-800">Kasir / Buat Pesanan</h1>
             </div>
             <div class="flex items-center gap-4">
                 <div class="relative hidden sm:block">
                     <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">🔍</span>
-                    <input type="text" placeholder="Cari menu..." class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-amber-500 focus:border-amber-500 outline-none text-sm w-64">
+                    <input type="text" placeholder="Cari menu..."
+                        class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-amber-500 focus:border-amber-500 outline-none text-sm w-64">
                 </div>
                 <div class="border-l border-gray-300 h-6 mx-2 hidden sm:block"></div>
                 <span class="text-gray-600 font-medium text-sm hidden sm:block">Halo, Admin!</span>
-                <div class="h-8 w-8 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold cursor-pointer hover:bg-amber-600">
+                <div
+                    class="h-8 w-8 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold cursor-pointer hover:bg-amber-600">
                     A
                 </div>
             </div>
@@ -59,26 +76,38 @@
 
         <!-- Main Content Area (Layout Khusus Kasir: Kiri Produk, Kanan Struk) -->
         <main class="flex-1 flex flex-col lg:flex-row overflow-hidden relative">
-            
+
             <!-- Bagian Kiri: Area Produk -->
             <div class="flex-1 overflow-y-auto bg-gray-50 p-4 sm:p-6 flex flex-col">
-                
+
                 <!-- Filter Kategori -->
                 <div class="flex gap-3 mb-6 overflow-x-auto pb-2">
-                    <button class="bg-amber-600 text-white px-5 py-2 rounded-full font-semibold text-sm shadow-sm whitespace-nowrap">Semua Menu</button>
-                    <button class="bg-white text-gray-600 hover:bg-gray-100 border border-gray-200 px-5 py-2 rounded-full font-medium text-sm transition-colors whitespace-nowrap">🥤 Minuman</button>
-                    <button class="bg-white text-gray-600 hover:bg-gray-100 border border-gray-200 px-5 py-2 rounded-full font-medium text-sm transition-colors whitespace-nowrap">🍜 Makanan</button>
-                    <button class="bg-white text-gray-600 hover:bg-gray-100 border border-gray-200 px-5 py-2 rounded-full font-medium text-sm transition-colors whitespace-nowrap">🍟 Cemilan</button>
+                    <button
+                        class="bg-amber-600 text-white px-5 py-2 rounded-full font-semibold text-sm shadow-sm whitespace-nowrap">Semua
+                        Menu</button>
+                    <button
+                        class="bg-white text-gray-600 hover:bg-gray-100 border border-gray-200 px-5 py-2 rounded-full font-medium text-sm transition-colors whitespace-nowrap">🥤
+                        Minuman</button>
+                    <button
+                        class="bg-white text-gray-600 hover:bg-gray-100 border border-gray-200 px-5 py-2 rounded-full font-medium text-sm transition-colors whitespace-nowrap">🍜
+                        Makanan</button>
+                    <button
+                        class="bg-white text-gray-600 hover:bg-gray-100 border border-gray-200 px-5 py-2 rounded-full font-medium text-sm transition-colors whitespace-nowrap">🍟
+                        Cemilan</button>
                 </div>
 
                 <!-- Grid Menu (Bisa di-klik) -->
                 <div class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-4 pb-20 lg:pb-0">
-                    
+
                     <!-- Item Menu 1 -->
-                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 hover:border-amber-500 hover:shadow-md cursor-pointer transition-all overflow-hidden relative group">
+                    <div
+                        class="bg-white rounded-xl shadow-sm border border-gray-200 hover:border-amber-500 hover:shadow-md cursor-pointer transition-all overflow-hidden relative group">
                         <!-- Indikator Badge -->
-                        <div class="absolute top-2 right-2 bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-1 rounded">Minuman</div>
-                        <div class="h-24 bg-amber-100 flex items-center justify-center group-hover:bg-amber-200 transition-colors">
+                        <div
+                            class="absolute top-2 right-2 bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-1 rounded">
+                            Minuman</div>
+                        <div
+                            class="h-24 bg-amber-100 flex items-center justify-center group-hover:bg-amber-200 transition-colors">
                             <span class="text-4xl">🍹</span>
                         </div>
                         <div class="p-3 text-center">
@@ -88,9 +117,13 @@
                     </div>
 
                     <!-- Item Menu 2 -->
-                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 hover:border-amber-500 hover:shadow-md cursor-pointer transition-all overflow-hidden relative group">
-                        <div class="absolute top-2 right-2 bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-1 rounded">Minuman</div>
-                        <div class="h-24 bg-stone-200 flex items-center justify-center group-hover:bg-stone-300 transition-colors">
+                    <div
+                        class="bg-white rounded-xl shadow-sm border border-gray-200 hover:border-amber-500 hover:shadow-md cursor-pointer transition-all overflow-hidden relative group">
+                        <div
+                            class="absolute top-2 right-2 bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-1 rounded">
+                            Minuman</div>
+                        <div
+                            class="h-24 bg-stone-200 flex items-center justify-center group-hover:bg-stone-300 transition-colors">
                             <span class="text-4xl">☕</span>
                         </div>
                         <div class="p-3 text-center">
@@ -100,9 +133,13 @@
                     </div>
 
                     <!-- Item Menu 3 -->
-                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 hover:border-amber-500 hover:shadow-md cursor-pointer transition-all overflow-hidden relative group">
-                        <div class="absolute top-2 right-2 bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 rounded">Makanan</div>
-                        <div class="h-24 bg-orange-100 flex items-center justify-center group-hover:bg-orange-200 transition-colors">
+                    <div
+                        class="bg-white rounded-xl shadow-sm border border-gray-200 hover:border-amber-500 hover:shadow-md cursor-pointer transition-all overflow-hidden relative group">
+                        <div
+                            class="absolute top-2 right-2 bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 rounded">
+                            Makanan</div>
+                        <div
+                            class="h-24 bg-orange-100 flex items-center justify-center group-hover:bg-orange-200 transition-colors">
                             <span class="text-4xl">🍜</span>
                         </div>
                         <div class="p-3 text-center">
@@ -112,9 +149,13 @@
                     </div>
 
                     <!-- Item Menu 4 -->
-                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 hover:border-amber-500 hover:shadow-md cursor-pointer transition-all overflow-hidden relative group">
-                        <div class="absolute top-2 right-2 bg-yellow-100 text-yellow-800 text-[10px] font-bold px-2 py-1 rounded">Cemilan</div>
-                        <div class="h-24 bg-yellow-100 flex items-center justify-center group-hover:bg-yellow-200 transition-colors">
+                    <div
+                        class="bg-white rounded-xl shadow-sm border border-gray-200 hover:border-amber-500 hover:shadow-md cursor-pointer transition-all overflow-hidden relative group">
+                        <div
+                            class="absolute top-2 right-2 bg-yellow-100 text-yellow-800 text-[10px] font-bold px-2 py-1 rounded">
+                            Cemilan</div>
+                        <div
+                            class="h-24 bg-yellow-100 flex items-center justify-center group-hover:bg-yellow-200 transition-colors">
                             <span class="text-4xl">🍟</span>
                         </div>
                         <div class="p-3 text-center">
@@ -122,11 +163,15 @@
                             <p class="text-amber-600 font-bold text-sm">Rp 12.000</p>
                         </div>
                     </div>
-                    
+
                     <!-- Item Menu 5 -->
-                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 hover:border-amber-500 hover:shadow-md cursor-pointer transition-all overflow-hidden relative group">
-                        <div class="absolute top-2 right-2 bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-1 rounded">Minuman</div>
-                        <div class="h-24 bg-orange-50 flex items-center justify-center group-hover:bg-orange-100 transition-colors">
+                    <div
+                        class="bg-white rounded-xl shadow-sm border border-gray-200 hover:border-amber-500 hover:shadow-md cursor-pointer transition-all overflow-hidden relative group">
+                        <div
+                            class="absolute top-2 right-2 bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-1 rounded">
+                            Minuman</div>
+                        <div
+                            class="h-24 bg-orange-50 flex items-center justify-center group-hover:bg-orange-100 transition-colors">
                             <span class="text-4xl">🥤</span>
                         </div>
                         <div class="p-3 text-center">
@@ -136,9 +181,13 @@
                     </div>
 
                     <!-- Item Menu 6 -->
-                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 hover:border-amber-500 hover:shadow-md cursor-pointer transition-all overflow-hidden relative group">
-                        <div class="absolute top-2 right-2 bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 rounded">Makanan</div>
-                        <div class="h-24 bg-red-100 flex items-center justify-center group-hover:bg-red-200 transition-colors">
+                    <div
+                        class="bg-white rounded-xl shadow-sm border border-gray-200 hover:border-amber-500 hover:shadow-md cursor-pointer transition-all overflow-hidden relative group">
+                        <div
+                            class="absolute top-2 right-2 bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 rounded">
+                            Makanan</div>
+                        <div
+                            class="h-24 bg-red-100 flex items-center justify-center group-hover:bg-red-200 transition-colors">
                             <span class="text-4xl">🍛</span>
                         </div>
                         <div class="p-3 text-center">
@@ -151,21 +200,24 @@
             </div>
 
             <!-- Bagian Kanan: Keranjang / Pesanan Saat Ini -->
-            <div class="w-full lg:w-96 bg-white border-l border-gray-200 flex flex-col h-full shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] lg:shadow-none absolute bottom-0 lg:relative z-20 lg:z-auto h-[50vh] lg:h-auto rounded-t-2xl lg:rounded-none transition-transform">
-                
+            <div
+                class="w-full lg:w-96 bg-white border-l border-gray-200 flex flex-col h-full shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] lg:shadow-none absolute bottom-0 lg:relative z-20 lg:z-auto h-[50vh] lg:h-auto rounded-t-2xl lg:rounded-none transition-transform">
+
                 <!-- Header Keranjang -->
-                <div class="p-4 border-b border-gray-100 flex justify-between items-center bg-white rounded-t-2xl lg:rounded-none">
+                <div
+                    class="p-4 border-b border-gray-100 flex justify-between items-center bg-white rounded-t-2xl lg:rounded-none">
                     <h2 class="text-lg font-bold text-gray-800">Detail Pesanan</h2>
                 </div>
 
                 <!-- Input Nama Pelanggan -->
                 <div class="px-4 py-3 border-b border-gray-100 bg-gray-50">
-                    <input type="text" placeholder="Nama Pelanggan (Opsional)" class="w-full bg-white px-3 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500 outline-none text-sm transition-colors">
+                    <input type="text" placeholder="Nama Pelanggan (Opsional)"
+                        class="w-full bg-white px-3 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500 outline-none text-sm transition-colors">
                 </div>
 
                 <!-- Daftar Item Keranjang (Scrollable) -->
                 <div class="flex-1 overflow-y-auto p-4 space-y-4 bg-white">
-                    
+
                     <!-- Item Keranjang 1 -->
                     <div class="flex justify-between items-center">
                         <div class="flex-1">
@@ -174,9 +226,11 @@
                         </div>
                         <div class="flex items-center gap-3">
                             <div class="flex items-center border border-gray-200 rounded-lg">
-                                <button class="px-2 py-1 text-gray-600 hover:bg-gray-100 rounded-l-lg font-bold">-</button>
+                                <button
+                                    class="px-2 py-1 text-gray-600 hover:bg-gray-100 rounded-l-lg font-bold">-</button>
                                 <span class="px-2 text-sm font-bold w-8 text-center">2</span>
-                                <button class="px-2 py-1 text-gray-600 hover:bg-gray-100 rounded-r-lg font-bold">+</button>
+                                <button
+                                    class="px-2 py-1 text-gray-600 hover:bg-gray-100 rounded-r-lg font-bold">+</button>
                             </div>
                             <p class="text-sm font-bold text-gray-800 w-16 text-right">Rp 8.000</p>
                         </div>
@@ -190,9 +244,11 @@
                         </div>
                         <div class="flex items-center gap-3">
                             <div class="flex items-center border border-gray-200 rounded-lg">
-                                <button class="px-2 py-1 text-gray-600 hover:bg-gray-100 rounded-l-lg font-bold">-</button>
+                                <button
+                                    class="px-2 py-1 text-gray-600 hover:bg-gray-100 rounded-l-lg font-bold">-</button>
                                 <span class="px-2 text-sm font-bold w-8 text-center">1</span>
-                                <button class="px-2 py-1 text-gray-600 hover:bg-gray-100 rounded-r-lg font-bold">+</button>
+                                <button
+                                    class="px-2 py-1 text-gray-600 hover:bg-gray-100 rounded-r-lg font-bold">+</button>
                             </div>
                             <p class="text-sm font-bold text-gray-800 w-16 text-right">Rp 10.000</p>
                         </div>
@@ -215,7 +271,8 @@
                         <span class="text-xl font-bold text-amber-600">Rp 18.000</span>
                     </div>
 
-                    <button class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-xl shadow-lg transition-colors flex justify-between items-center text-lg">
+                    <button
+                        class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-xl shadow-lg transition-colors flex justify-between items-center text-lg">
                         <span>Proses Pesanan</span>
                         <span>💸</span>
                     </button>
@@ -227,4 +284,5 @@
     </div>
 
 </body>
+
 </html>
