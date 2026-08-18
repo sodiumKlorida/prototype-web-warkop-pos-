@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Penjualan - Warkop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-900 flex h-screen overflow-hidden">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-amber-900 text-white flex flex-col transition-transform duration-300 ease-in-out hidden md:flex z-20">
+        <!-- Logo / Brand -->
+        <div class="flex items-center justify-center h-16 border-b border-amber-800">
+            <span class="font-bold text-xl tracking-wider">☕ WarkopKita</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
+            <a href="pesanan.html" class="flex items-center px-4 py-3 text-amber-100 hover:bg-amber-800 hover:text-white rounded-lg transition-colors">
+                <span class="mr-3 text-lg">🛒</span>
+                <span class="font-medium">Melayani Pesanan</span>
+            </a>
+
+            <a href="index.html" class="flex items-center px-4 py-3 text-amber-100 hover:bg-amber-800 hover:text-white rounded-lg transition-colors">
+                <span class="mr-3 text-lg">📋</span>
+                <span class="font-medium">Kelola Menu</span>
+            </a>
+
+            <!-- Nav Laporan Penjualan (Aktif di halaman ini) -->
+            <a href="laporan.html" class="flex items-center px-4 py-3 bg-white text-amber-900 rounded-lg shadow-md transition-colors font-bold mt-2">
+                <span class="mr-3 text-lg">📊</span>
+                <span>Laporan Penjualan</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Wrapper -->
+    <div class="flex-1 flex flex-col overflow-hidden">
+        
+        <!-- Top Navbar -->
+        <header class="bg-white shadow-sm border-b border-gray-200 h-16 flex items-center justify-between px-4 sm:px-6 lg:px-8 z-10">
+            <div class="flex items-center">
+                <h1 class="text-xl font-bold text-gray-800">Laporan Penjualan</h1>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-gray-600 font-medium text-sm hidden sm:block">Halo, Admin!</span>
+                <div class="h-8 w-8 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold cursor-pointer hover:bg-amber-600">
+                    A
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area (Scrollable) -->
+        <main class="flex-1 overflow-y-auto bg-gray-50 p-4 sm:p-6 lg:p-8">
+            
+            <!-- Header Konten & Filter -->
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
+                <div class="flex items-center bg-white border border-gray-300 rounded-lg p-1 shadow-sm">
+                    <button class="px-4 py-1.5 bg-amber-100 text-amber-800 font-semibold rounded-md text-sm">Hari Ini</button>
+                    <button class="px-4 py-1.5 text-gray-600 hover:bg-gray-50 font-medium rounded-md text-sm transition-colors">Minggu Ini</button>
+                    <button class="px-4 py-1.5 text-gray-600 hover:bg-gray-50 font-medium rounded-md text-sm transition-colors">Bulan Ini</button>
+                </div>
+                <button class="flex items-center bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors shadow-sm text-sm">
+                    <span class="mr-2">📥</span> Unduh Laporan (Excel)
+                </button>
+            </div>
+
+            <!-- Grid Ringkasan (Summary Cards) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <!-- Card 1: Pendapatan -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 flex items-center">
+                    <div class="h-14 w-14 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-2xl mr-4">
+                        💰
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-gray-500 mb-1">Pendapatan Hari Ini</p>
+                        <h3 class="text-2xl font-bold text-gray-800">Rp 455.000</h3>
+                    </div>
+                </div>
+
+                <!-- Card 2: Total Pesanan -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 flex items-center">
+                    <div class="h-14 w-14 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-2xl mr-4">
+                        🧾
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-gray-500 mb-1">Total Pesanan</p>
+                        <h3 class="text-2xl font-bold text-gray-800">32 Transaksi</h3>
+                    </div>
+                </div>
+
+                <!-- Card 3: Menu Terlaris -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 flex items-center">
+                    <div class="h-14 w-14 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 text-2xl mr-4">
+                        🏆
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-gray-500 mb-1">Menu Terlaris</p>
+                        <h3 class="text-xl font-bold text-gray-800">Es Teh Manis (18x)</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabel Transaksi -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                <div class="p-5 border-b border-gray-200 flex justify-between items-center bg-white">
+                    <h2 class="text-lg font-bold text-gray-800">Riwayat Transaksi Terbaru</h2>
+                    <div class="relative">
+                        <input type="text" placeholder="Cari ID/Nama..." class="pl-8 pr-4 py-1.5 border border-gray-300 rounded-lg focus:ring-amber-500 focus:border-amber-500 outline-none text-sm w-48 sm:w-64">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-2.5 text-gray-400 text-xs">🔍</span>
+                    </div>
+                </div>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-50 text-gray-500 text-sm border-b border-gray-200">
+                                <th class="px-6 py-4 font-semibold">ID Transaksi</th>
+                                <th class="px-6 py-4 font-semibold">Waktu</th>
+                                <th class="px-6 py-4 font-semibold">Pelanggan / Meja</th>
+                                <th class="px-6 py-4 font-semibold">Total Item</th>
+                                <th class="px-6 py-4 font-semibold">Total Pembayaran</th>
+                                <th class="px-6 py-4 font-semibold">Status</th>
+                                <th class="px-6 py-4 font-semibold text-center">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-gray-700 divide-y divide-gray-100">
+                            
+                            <!-- Baris 1 -->
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-6 py-4 font-medium text-gray-900">#TRX-0125</td>
+                                <td class="px-6 py-4">10:45 WIB</td>
+                                <td class="px-6 py-4">Meja 4 (Budi)</td>
+                                <td class="px-6 py-4">3 Item</td>
+                                <td class="px-6 py-4 font-bold text-gray-800">Rp 28.000</td>
+                                <td class="px-6 py-4">
+                                    <span class="bg-green-100 text-green-800 px-2.5 py-1 rounded-full text-xs font-semibold">Selesai</span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    <button class="text-amber-600 hover:text-amber-800 font-medium text-sm transition-colors">Detail</button>
+                                </td>
+                            </tr>
+
+                            <!-- Baris 2 -->
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-6 py-4 font-medium text-gray-900">#TRX-0124</td>
+                                <td class="px-6 py-4">10:20 WIB</td>
+                                <td class="px-6 py-4">Meja 1</td>
+                                <td class="px-6 py-4">2 Item</td>
+                                <td class="px-6 py-4 font-bold text-gray-800">Rp 15.000</td>
+                                <td class="px-6 py-4">
+                                    <span class="bg-green-100 text-green-800 px-2.5 py-1 rounded-full text-xs font-semibold">Selesai</span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    <button class="text-amber-600 hover:text-amber-800 font-medium text-sm transition-colors">Detail</button>
+                                </td>
+                            </tr>
+
+                            <!-- Baris 3 -->
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-6 py-4 font-medium text-gray-900">#TRX-0123</td>
+                                <td class="px-6 py-4">09:15 WIB</td>
+                                <td class="px-6 py-4">Takeaway (Siti)</td>
+                                <td class="px-6 py-4">5 Item</td>
+                                <td class="px-6 py-4 font-bold text-gray-800">Rp 45.000</td>
+                                <td class="px-6 py-4">
+                                    <span class="bg-green-100 text-green-800 px-2.5 py-1 rounded-full text-xs font-semibold">Selesai</span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    <button class="text-amber-600 hover:text-amber-800 font-medium text-sm transition-colors">Detail</button>
+                                </td>
+                            </tr>
+
+                            <!-- Baris 4 (Contoh Batal) -->
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-6 py-4 font-medium text-gray-900">#TRX-0122</td>
+                                <td class="px-6 py-4">08:30 WIB</td>
+                                <td class="px-6 py-4">Meja 2</td>
+                                <td class="px-6 py-4">1 Item</td>
+                                <td class="px-6 py-4 font-bold text-gray-800 text-gray-400 line-through">Rp 5.000</td>
+                                <td class="px-6 py-4">
+                                    <span class="bg-red-100 text-red-800 px-2.5 py-1 rounded-full text-xs font-semibold">Batal</span>
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    <button class="text-amber-600 hover:text-amber-800 font-medium text-sm transition-colors">Detail</button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="p-4 border-t border-gray-200 flex justify-between items-center bg-gray-50">
+                    <span class="text-sm text-gray-600">Menampilkan 1-4 dari 32 transaksi</span>
+                    <div class="flex gap-1">
+                        <button class="px-3 py-1 border border-gray-300 rounded bg-white text-gray-600 hover:bg-gray-100 text-sm font-medium disabled:opacity-50" disabled>Sebelumnya</button>
+                        <button class="px-3 py-1 border border-amber-600 rounded bg-amber-600 text-white text-sm font-medium">1</button>
+                        <button class="px-3 py-1 border border-gray-300 rounded bg-white text-gray-600 hover:bg-gray-100 text-sm font-medium">2</button>
+                        <button class="px-3 py-1 border border-gray-300 rounded bg-white text-gray-600 hover:bg-gray-100 text-sm font-medium">3</button>
+                        <button class="px-3 py-1 border border-gray-300 rounded bg-white text-gray-600 hover:bg-gray-100 text-sm font-medium">Selanjutnya</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
